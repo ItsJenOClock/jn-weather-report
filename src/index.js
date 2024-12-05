@@ -81,7 +81,7 @@ const updateCity = () => {
 
 const getLocation = async () => {
   try {
-    const response = await axios.get('http://127.0.0.1:5000/location', {
+    const response = await axios.get('https://weather-report-proxy-server-adki.onrender.com/location', {
       params: {
         q: state.cityName.textContent
       }
@@ -102,7 +102,7 @@ const getLocation = async () => {
 
 const getTempBasedOnLocation = async (latitude, longitude) => {
   try {
-    const response = await axios.get('http://127.0.0.1:5000/weather', {
+    const response = await axios.get('https://weather-report-proxy-server-adki.onrender.com/weather', {
       params: {
         lat: latitude,
         lon: longitude
